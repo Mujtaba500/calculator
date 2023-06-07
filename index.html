@@ -9,35 +9,38 @@
 </head>
 <body>
     <div id="calc-body">
-        <div id="display"></div>
+        <div id="display">
+            <h2 id="input-display"></h2>
+            <h2 id="result"></h2>
+        </div>
         <div id="sec-01">
-        <button class="spcl">CLEAR</button>
-        <button class="spcl">DELETE</button>
+        <button id="clear" class="spcl">CLEAR</button>
+        <button id="del" class="spcl">DELETE</button>
         </div>
        <div id="sec-02">
         <div>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button class="op">÷</button>
+            <button onclick='inputValue(7)'>7</button>
+            <button onclick="inputValue(8)">8</button>
+            <button onclick="inputValue(9)">9</button>
+            <button onclick="setOperator('/')" class="op">÷</button>
         </div>
         <div>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button class="op">x</button>
+            <button onclick="inputValue(4)">4</button>
+            <button onclick="inputValue(5)">5</button>
+            <button onclick="inputValue(6)">6</button>
+            <button onclick="setOperator('*')" class="op">x</button>
         </div>
         <div>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button class="op">-</button>
+            <button onclick="inputValue(1)">1</button>
+            <button onclick="inputValue(2)">2</button>
+            <button onclick="inputValue(3)">3</button>
+            <button onclick="setOperator('-')" class="op">-</button>
         </div>
         <div>
-            <button>.</button>
-            <button>0</button>
+            <button id="n.">.</button>
+            <button onclick="inputValue(0)">0</button>
             <button class="rslt">=</button>
-            <button class="op">+</button>
+            <button onclick="setOperator('+')" class="op">+</button>
         </div>
        </div> 
 
