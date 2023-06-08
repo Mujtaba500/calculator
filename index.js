@@ -12,6 +12,9 @@ let value2 = 0
 let operation = ""
 
 function inputValue(num) {
+    if (displayInput.innerText.includes('.')){
+        document.querySelector("#ndot").disabled = true;
+    } 
      if ( operation === ""){
     if(displayInput.innerText == 0){
         displayInput.innerText = num
@@ -80,4 +83,5 @@ function clearAll() {
     operation = "";
     displayInput.innerText = 0;
     displayResult.innerText = ''
+    document.querySelector("#ndot").disabled = false;
 }
