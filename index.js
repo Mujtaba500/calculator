@@ -12,7 +12,7 @@ let value2 = 0
 let operation = ""
 
 function inputValue(num) {
-    if (displayInput.innerText.includes('.')){
+    if (num === '.'){
         document.querySelector("#ndot").disabled = true;
     } 
      if ( operation === ""){
@@ -51,7 +51,8 @@ function setOperator(inputOp) {
     if(operation === ""){
     operation = inputOp;
     displayInput.innerText += inputOp 
-    value1 = Number(value1)
+    value1 = Number(value1);
+    document.querySelector("#ndot").disabled = false;
     }
     else {
         return;
